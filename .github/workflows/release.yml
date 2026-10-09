@@ -55,7 +55,7 @@ jobs:
           mkdir "$out"
           (cd modules/buildx && go run . -v "$VERSION" --name buildx --main . --out "$out")
           go run scripts/verify-artifacts.go "$out" "$VERSION"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         if: inputs.module == 'buildx'
         with:
           name: buildx-release
@@ -72,7 +72,7 @@ jobs:
             printf 'Initial independent release.\n\n' >> "$RUNNER_TEMP/notes.md"
             git log --format='- %s (%h)' -- "modules/$MODULE" >> "$RUNNER_TEMP/notes.md"
           fi
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: release-notes
           path: ${{ runner.temp }}/notes.md
