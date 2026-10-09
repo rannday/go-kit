@@ -48,9 +48,10 @@ jobs:
       - uses: golangci/golangci-lint-action@v9
         if: matrix.golangci
         with:
-          version: v2.13.2
+          version: v2.14.0
           working-directory: modules/${{ matrix.module }}
           args: --config=../../.golangci.yml --timeout=5m
+
   workspace:
     runs-on: ubuntu-24.04
     timeout-minutes: 20

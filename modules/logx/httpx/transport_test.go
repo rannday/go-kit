@@ -164,7 +164,7 @@ func TestTransportLogger_RequestBodyRedaction(t *testing.T) {
 	defer resp.Body.Close()
 
 	out := buf.String()
-	if !(strings.Contains(out, "password") && strings.Contains(out, "REDACTED")) {
+	if !strings.Contains(out, "password") || !strings.Contains(out, "REDACTED") {
 		t.Fatalf("expected password to be redacted in logs, got: %s", out)
 	}
 	if strings.Contains(out, "secret") {

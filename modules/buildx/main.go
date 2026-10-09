@@ -1,3 +1,4 @@
+// Package main provides the buildx command-line interface.
 package main
 
 import (

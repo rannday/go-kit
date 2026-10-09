@@ -101,12 +101,12 @@ func DecodeInto(data []byte, source string, dst any) error {
 		return err
 	}
 
-	decoder, err := decoderForSource(source)
+	decode, err := decoderForSource(source)
 	if err != nil {
 		return fmt.Errorf("decode %q: %w", source, err)
 	}
 
-	if err := decoder(data, dst); err != nil {
+	if err := decode(data, dst); err != nil {
 		return fmt.Errorf("decode %q: %w", source, err)
 	}
 

@@ -9,14 +9,18 @@ import (
 
 const dotEnvMaxLine = 1024 * 1024
 
-func parseDotEnv(path string) (map[string]string, error) {
+func parseDotEnv(path string) (values map[string]string, retErr error) {
 	file, err := os.Open(path)
 	if err != nil {
 		return nil, fmt.Errorf("read dotenv %q: %w", path, err)
 	}
-	defer file.Close()
+	defer func() {
+		if err := file.Close(); err != nil && retErr == nil {
+			retErr = fmt.Errorf("read dotenv %q: %w", path, err)
+		}
+	}()
 
-	values := make(map[string]string)
+	values = make(map[string]string)
 
 	scanner := bufio.NewScanner(file)
 	scanner.Buffer(make([]byte, 64*1024), dotEnvMaxLine)

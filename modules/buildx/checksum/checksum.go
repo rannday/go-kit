@@ -1,3 +1,4 @@
+// Package checksum creates SHA-256 checksums for release archives.
 package checksum
 
 import (
@@ -13,17 +14,23 @@ import (
 	"github.com/rannday/go-kit/modules/buildx/atomicfile"
 )
 
+// Entry associates a file name with its SHA-256 checksum.
 type Entry struct {
 	Name string
 	Sum  string
 }
 
-func SumFile(path string) (string, error) {
+// SumFile returns the hexadecimal SHA-256 checksum of a file.
+func SumFile(path string) (sum string, retErr error) {
 	file, err := os.Open(path)
 	if err != nil {
 		return "", err
 	}
-	defer file.Close()
+	defer func() {
+		if err := file.Close(); err != nil && retErr == nil {
+			retErr = err
+		}
+	}()
 
 	hash := sha256.New()
 	if _, err := io.Copy(hash, file); err != nil {
@@ -32,6 +39,7 @@ func SumFile(path string) (string, error) {
 	return hex.EncodeToString(hash.Sum(nil)), nil
 }
 
+// WriteAtomic writes a sorted checksum manifest atomically and returns its path.
 func WriteAtomic(dir, name string, entries []Entry) (string, error) {
 	path := filepath.Join(dir, name)
 	entries = append([]Entry(nil), entries...)

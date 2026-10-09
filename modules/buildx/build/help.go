@@ -8,10 +8,18 @@ import (
 func PrintUsage(w io.Writer) {
 	targets := DefaultTargetStrings()
 
-	fmt.Fprintln(w, "Usage:")
-	fmt.Fprintln(w, "  buildx [options] -v <version>")
-	fmt.Fprintln(w)
-	fmt.Fprintln(w, "Options:")
+	if _, err := fmt.Fprintln(w, "Usage:"); err != nil {
+		return
+	}
+	if _, err := fmt.Fprintln(w, "  buildx [options] -v <version>"); err != nil {
+		return
+	}
+	if _, err := fmt.Fprintln(w); err != nil {
+		return
+	}
+	if _, err := fmt.Fprintln(w, "Options:"); err != nil {
+		return
+	}
 	printHelpOption(w, "-v, --version <version>", "release version (required)")
 	printHelpOption(w, "-n, --name <name>", "binary/release name (default: repo directory)")
 	printHelpOption(w, "-m, --main <package>", "main package (default: ./cmd/<name>, then repo root)")
@@ -25,18 +33,38 @@ func PrintUsage(w io.Writer) {
 	printHelpOption(w, "--go <path>", "Go command to run (default: go)")
 	printHelpOption(w, "--checksum-name <name>", "checksum file name (default: "+DefaultChecksumName+")")
 	printHelpOption(w, "--verbose", "print build commands and Go output")
-	fmt.Fprintln(w)
+	if _, err := fmt.Fprintln(w); err != nil {
+		return
+	}
 	printHelpOption(w, "-h, --help", "display this help and exit")
-	fmt.Fprintln(w)
-	fmt.Fprintln(w, "Default targets:")
-	fmt.Fprintf(w, "  %s, %s, %s,\n", targets[0], targets[1], targets[2])
-	fmt.Fprintf(w, "  %s, %s\n", targets[3], targets[4])
-	fmt.Fprintln(w)
-	fmt.Fprintln(w, "Output:")
-	fmt.Fprintln(w, "  archives: <name>-<version>-<goos>-<goarch>.<format>")
-	fmt.Fprintf(w, "  checksum: %s\n", DefaultChecksumName)
+	if _, err := fmt.Fprintln(w); err != nil {
+		return
+	}
+	if _, err := fmt.Fprintln(w, "Default targets:"); err != nil {
+		return
+	}
+	if _, err := fmt.Fprintf(w, "  %s, %s, %s,\n", targets[0], targets[1], targets[2]); err != nil {
+		return
+	}
+	if _, err := fmt.Fprintf(w, "  %s, %s\n", targets[3], targets[4]); err != nil {
+		return
+	}
+	if _, err := fmt.Fprintln(w); err != nil {
+		return
+	}
+	if _, err := fmt.Fprintln(w, "Output:"); err != nil {
+		return
+	}
+	if _, err := fmt.Fprintln(w, "  archives: <name>-<version>-<goos>-<goarch>.<format>"); err != nil {
+		return
+	}
+	if _, err := fmt.Fprintf(w, "  checksum: %s\n", DefaultChecksumName); err != nil {
+		return
+	}
 }
 
 func printHelpOption(w io.Writer, name, desc string) {
-	fmt.Fprintf(w, "  %-29s %s\n", name, desc)
+	if _, err := fmt.Fprintf(w, "  %-29s %s\n", name, desc); err != nil {
+		return
+	}
 }

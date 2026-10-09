@@ -9,48 +9,18 @@ run:
   tests: true
 
 linters:
-  # Disable default linter set to explicitly control enabled linters
-  default: none
-  enable:
-    # Core correctness and bugs
-    - errcheck      # Checks for unhandled errors
-    - govet         # Examines Go source code and reports suspicious constructs
-    - staticcheck   # Advanced static analysis checks
-    - unused        # Checks for unused constants, variables, functions and types
-    - ineffassign   # Detects ineffectual assignments
-
-    # Code quality and performance
-    - bodyclose     # Checks whether HTTP response body is closed successfully
-    - goconst       # Finds repeated strings that could be replaced by a constant
-    - gocritic      # Provides diagnostics that check for bugs, performance and style issues
-    - revive        # Fast, configurable, extensible linter for Go (drop-in replacement for golint)
-    - unconvert     # Removes unnecessary type conversions
-
-  settings:
-    govet:
-      # Preserve all vet analyzers except fieldalignment.
-      enable-all: true
-      disable:
-        - fieldalignment # Avoid strict memory layout noise unless optimizing
-    goconst:
-      min-len: 3
-      min-occurrences: 3
-    gocritic:
-      enabled-tags:
-        - diagnostic
-        - style
-        - performance
+  # Use golangci-lint's maintained default set for focused correctness checks.
+  default: standard
 
   exclusions:
     # Preserve the vendor-directory exclusion.
     paths:
       - vendor
-    # Relax errcheck and goconst only for test files.
+    # Relax errcheck only for test files.
     rules:
       - path: _test\.go
         linters:
           - errcheck
-          - goconst
 
 formatters:
   # v2 runs formatting checks in the formatter section, not as linters.

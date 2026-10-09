@@ -206,7 +206,9 @@ func buildOneTarget(repoRoot, outAbs, name, mainPkg string, opts Options, target
 	if err != nil {
 		return targetBuildResult{}, err
 	}
-	defer os.RemoveAll(buildDir)
+	defer func() {
+		_ = os.RemoveAll(buildDir)
+	}()
 
 	binaryPath := filepath.Join(buildDir, BinaryName(name, target.GOOS))
 	if err := buildTarget(repoRoot, mainPkg, opts, target, binaryPath); err != nil {
@@ -251,7 +253,9 @@ func buildTarget(repoRoot, mainPkg string, opts Options, target TargetSpec, bina
 	)
 
 	if opts.Verbose {
-		fmt.Fprintf(os.Stdout, "%s\n", strings.Join(cmd.Args, " "))
+		if _, err := fmt.Fprintf(os.Stdout, "%s\n", strings.Join(cmd.Args, " ")); err != nil {
+			return err
+		}
 	}
 
 	output, err := cmd.CombinedOutput()

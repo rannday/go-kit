@@ -1,3 +1,4 @@
+// Package build selects and validates build targets for release archives.
 package build
 
 import (
@@ -27,6 +28,7 @@ func DefaultTargets() []TargetSpec {
 	}
 }
 
+// DefaultTargetStrings returns the default build targets in string form.
 func DefaultTargetStrings() []string {
 	targets := DefaultTargets()
 	out := make([]string, 0, len(targets))
@@ -36,6 +38,7 @@ func DefaultTargetStrings() []string {
 	return out
 }
 
+// ParseTarget parses a GOOS/GOARCH target with an optional archive format.
 func ParseTarget(raw string) (TargetSpec, error) {
 	raw = strings.TrimSpace(raw)
 	if raw == "" {
@@ -71,6 +74,7 @@ func defaultFormat(goos string) archive.Format {
 	return archive.FormatTarGz
 }
 
+// ValidateUniqueArchiveNames rejects targets that produce duplicate archive names.
 func ValidateUniqueArchiveNames(name, version string, targets []TargetSpec) error {
 	seen := make(map[string]struct{}, len(targets))
 	for _, target := range targets {
@@ -83,10 +87,12 @@ func ValidateUniqueArchiveNames(name, version string, targets []TargetSpec) erro
 	return nil
 }
 
+// ArchiveName returns the release archive name for a target.
 func ArchiveName(name, version string, target TargetSpec) string {
 	return fmt.Sprintf("%s-%s-%s-%s.%s", name, version, target.GOOS, target.GOARCH, target.Format)
 }
 
+// BinaryName returns the executable name for a target operating system.
 func BinaryName(name, goos string) string {
 	if isWindows(goos) {
 		return name + ".exe"

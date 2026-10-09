@@ -72,6 +72,7 @@ func (e UnsettableFieldError) Error() string {
 	return fmt.Sprintf("cannot set env %s: field is unsettable", e.Key)
 }
 
+// Options configures environment loading.
 type Options struct {
 	// DotEnvPath is an optional fallback file used when process env is missing.
 	DotEnvPath string
@@ -188,8 +189,8 @@ func loadStruct(v reflect.Value, dotEnv map[string]string, state *traversalState
 
 		value, ok := resolveValue(key, dotEnv)
 
-		required := tagTruthy(fieldType, "required")
-		allowEmpty := tagTruthy(fieldType, "allow_empty")
+		required := tagTruthy(&fieldType, "required")
+		allowEmpty := tagTruthy(&fieldType, "allow_empty")
 
 		if !ok && required {
 			return changed, MissingRequiredError{Key: key}
@@ -251,7 +252,7 @@ func loadContainer(field reflect.Value, dotEnv map[string]string, state *travers
 	}
 }
 
-func tagTruthy(fieldType reflect.StructField, key string) bool {
+func tagTruthy(fieldType *reflect.StructField, key string) bool {
 	return strings.EqualFold(fieldType.Tag.Get(key), "true")
 }
 
@@ -270,7 +271,7 @@ func resolveValue(key string, dotEnv map[string]string) (string, bool) {
 }
 
 func setField(field reflect.Value, value string) error {
-	if field.Kind() == reflect.Ptr {
+	if field.Kind() == reflect.Pointer {
 		if field.IsNil() {
 			field.Set(reflect.New(field.Type().Elem()))
 		}

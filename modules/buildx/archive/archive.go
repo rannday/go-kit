@@ -46,12 +46,12 @@ func WriteAtomic(path string, format Format, items []Item) error {
 	})
 }
 
-func writeZip(path string, items []Item) error {
+func writeZip(path string, items []Item) (retErr error) {
 	file, err := os.Create(path)
 	if err != nil {
 		return err
 	}
-	defer file.Close()
+	defer closeFile(file, &retErr)
 
 	zw := zip.NewWriter(file)
 	for _, item := range items {
@@ -64,12 +64,12 @@ func writeZip(path string, items []Item) error {
 	return zw.Close()
 }
 
-func writeZipItem(zw *zip.Writer, item Item) error {
+func writeZipItem(zw *zip.Writer, item Item) (retErr error) {
 	info, file, err := openItem(item)
 	if err != nil {
 		return err
 	}
-	defer file.Close()
+	defer closeFile(file, &retErr)
 
 	hdr, err := zip.FileInfoHeader(info)
 	if err != nil {
@@ -91,12 +91,12 @@ func writeZipItem(zw *zip.Writer, item Item) error {
 	return err
 }
 
-func writeTarGz(path string, items []Item) error {
+func writeTarGz(path string, items []Item) (retErr error) {
 	file, err := os.Create(path)
 	if err != nil {
 		return err
 	}
-	defer file.Close()
+	defer closeFile(file, &retErr)
 
 	gz := gzip.NewWriter(file)
 	tw := tar.NewWriter(gz)
@@ -116,12 +116,12 @@ func writeTarGz(path string, items []Item) error {
 	return gz.Close()
 }
 
-func writeTarItem(tw *tar.Writer, item Item) error {
+func writeTarItem(tw *tar.Writer, item Item) (retErr error) {
 	info, file, err := openItem(item)
 	if err != nil {
 		return err
 	}
-	defer file.Close()
+	defer closeFile(file, &retErr)
 
 	hdr, err := tar.FileInfoHeader(info, "")
 	if err != nil {
@@ -165,4 +165,10 @@ func archiveName(item Item) string {
 		return filepath.ToSlash(item.Name)
 	}
 	return filepath.Base(item.Path)
+}
+
+func closeFile(file *os.File, retErr *error) {
+	if err := file.Close(); *retErr == nil {
+		*retErr = err
+	}
 }
