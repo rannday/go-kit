@@ -4,9 +4,9 @@ Four independently versioned Go modules, one development workspace.
 
 | Module | Import path | Minimum Go |
 | --- | --- | --- |
-| [logx](modules/logx/README.md), including httpx | `github.com/rannday/go-kit/modules/logx` | 1.26 |
-| [envx](modules/envx/README.md) | `github.com/rannday/go-kit/modules/envx` | 1.26 |
-| [confx](modules/confx/README.md) | `github.com/rannday/go-kit/modules/confx` | 1.26 |
+| [logx](modules/logx/README.md), including httpx | `github.com/rannday/go-kit/modules/logx` | 1.21 |
+| [envx](modules/envx/README.md) | `github.com/rannday/go-kit/modules/envx` | 1.18 |
+| [confx](modules/confx/README.md) | `github.com/rannday/go-kit/modules/confx` | 1.23 |
 | [buildx](modules/buildx/README.md), CLI and supporting packages | `github.com/rannday/go-kit/modules/buildx` | 1.18 |
 
 logx and envx use only the standard library. confx retains its existing TOML,
