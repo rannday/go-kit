@@ -1,0 +1,153 @@
+name: Release module
+on:
+  workflow_dispatch:
+    inputs:
+      module:
+        description: Module to release
+        type: choice
+        options: [logx, envx, confx, buildx]
+        required: true
+      version:
+        description: Canonical Go version (first release v0.1.0)
+        type: string
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: release-${{ inputs.module }}
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      MODULE: ${{ inputs.module }}
+      VERSION: ${{ inputs.version }}
+      GOWORK: 'off'
+      GOTOOLCHAIN: local
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-go@v6
+        with:
+          go-version: '1.26.x'
+          check-latest: true
+          cache-dependency-path: modules/**/go.*
+      - name: Validate inputs and tag absence
+        id: release
+        run: |
+          tag=$(bash scripts/validate-release.sh "$MODULE" "$VERSION")
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+      - run: bash scripts/test-all.sh --module "$MODULE" --race
+      - uses: dominikh/staticcheck-action@v1
+        with:
+          version: ${{ inputs.module == 'envx' && 'v0.7.0' || 'v0.8.1' }}
+          install-go: false
+          working-directory: modules/${{ inputs.module }}
+      - name: External integration
+        run: go run scripts/verify-consumer.go
+      - name: Build and verify buildx distribution
+        if: inputs.module == 'buildx'
+        run: |
+          out="$RUNNER_TEMP/buildx-release"
+          mkdir "$out"
+          (cd modules/buildx && go run . -v "$VERSION" --name buildx --main . --out "$out")
+          go run scripts/verify-artifacts.go "$out" "$VERSION"
+      - uses: actions/upload-artifact@v4
+        if: inputs.module == 'buildx'
+        with:
+          name: buildx-release
+          path: ${{ runner.temp }}/buildx-release/*
+          if-no-files-found: error
+      - name: Module-specific release notes
+        run: |
+          tag="modules/$MODULE/$VERSION"
+          previous=$(git for-each-ref --count=1 --sort=-version:refname --format='%(refname:short)' "refs/tags/modules/$MODULE/v*")
+          printf '# %s %s\n\nModule: `github.com/rannday/go-kit/modules/%s`\n\n' "$MODULE" "$VERSION" "$MODULE" > "$RUNNER_TEMP/notes.md"
+          if [[ -n $previous ]]; then
+            git log --format='- %s (%h)' "$previous..HEAD" -- "modules/$MODULE" >> "$RUNNER_TEMP/notes.md"
+          else
+            printf 'Initial independent release.\n\n' >> "$RUNNER_TEMP/notes.md"
+            git log --format='- %s (%h)' -- "modules/$MODULE" >> "$RUNNER_TEMP/notes.md"
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-notes
+          path: ${{ runner.temp }}/notes.md
+    outputs:
+      tag: ${{ steps.release.outputs.tag }}
+  minimum:
+    if: inputs.module == 'buildx'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      GOWORK: 'off'
+      GOTOOLCHAIN: local
+      MODULE: ${{ inputs.module }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@v6
+        with:
+          go-version: '1.18.x'
+          check-latest: true
+          cache-dependency-path: modules/buildx/go.*
+      - run: bash scripts/test-all.sh --module "$MODULE" --race
+  publish:
+    needs: [validate, minimum]
+    if: always() && needs.validate.result == 'success' && (needs.minimum.result == 'success' || needs.minimum.result == 'skipped')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    env:
+      MODULE: ${{ inputs.module }}
+      VERSION: ${{ inputs.version }}
+      TAG: ${{ needs.validate.outputs.tag }}
+      GH_TOKEN: ${{ github.token }}
+      GOWORK: 'off'
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-go@v6
+        with:
+          go-version: '1.26.x'
+          check-latest: true
+          cache-dependency-path: modules/**/go.*
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-notes
+          path: ${{ runner.temp }}/notes
+      - uses: actions/download-artifact@v4
+        if: inputs.module == 'buildx'
+        with:
+          name: buildx-release
+          path: ${{ runner.temp }}/buildx-release
+      - name: Reverify assets
+        if: inputs.module == 'buildx'
+        run: go run scripts/verify-artifacts.go "$RUNNER_TEMP/buildx-release" "$VERSION"
+      - name: Create immutable tag and release
+        run: |
+          bash scripts/validate-release.sh "$MODULE" "$VERSION"
+          if [[ -n $(git ls-remote --tags origin "refs/tags/$TAG") ]]; then
+            echo 'Remote tag already exists'; exit 1
+          fi
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git tag "$TAG" "$GITHUB_SHA"
+          git push origin "refs/tags/$TAG"
+          gh release create "$TAG" --verify-tag --draft --title "$MODULE $VERSION" --notes-file "$RUNNER_TEMP/notes/notes.md"
+          if [[ $MODULE == buildx ]]; then gh release upload "$TAG" "$RUNNER_TEMP/buildx-release/"*; fi
+          gh release edit "$TAG" --draft=false --latest=false
+      - name: Verify published module without replacements
+        run: |
+          for attempt in 1 2 3 4 5 6; do
+            if go run scripts/verify-consumer.go -module "$MODULE" -version "$VERSION"; then exit 0; fi
+            if [[ $attempt -lt 6 ]]; then sleep 30; fi
+          done
+          echo 'Publication verification failed. Preserve tag/release; inspect proxy propagation and rerun verification.'
+          exit 1

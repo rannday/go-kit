@@ -1,0 +1,17 @@
+version: 2
+updates:
+  - package-ecosystem: gomod
+    directory: /modules/logx
+    schedule: {interval: weekly}
+  - package-ecosystem: gomod
+    directory: /modules/envx
+    schedule: {interval: weekly}
+  - package-ecosystem: gomod
+    directory: /modules/confx
+    schedule: {interval: weekly}
+  - package-ecosystem: gomod
+    directory: /modules/buildx
+    schedule: {interval: weekly}
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: {interval: weekly}

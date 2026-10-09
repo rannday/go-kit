@@ -1,0 +1,19 @@
+/modules/buildx/buildx
+/modules/buildx/buildx.exe
+/modules/buildx/dist/
+/go.work.sum
+
+# Editor and OS files throughout the repository
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Go build/test artifacts
+/bin/
+/dist/
+/modules/*/bin/
+/modules/*/dist/
+*.test
+*.out
+coverage.*

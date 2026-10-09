@@ -1,0 +1,832 @@
+[
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  ".agents/skills/go-log/SKILL.md",
+        "repository": true,
+        "destination":  ".agents/skills/logx/SKILL.md",
+        "sha256":  "befeecc175b20a30e54036a8340f7cbc5e1a4aeb503edba400131dc5365b4693"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  ".editorconfig",
+        "repository": true,
+        "destination":  ".editorconfig",
+        "sha256":  "39605141ce4c66fc07285846e5cd64c2a5d2cc23320a0f57ff07aaca845d641c"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  ".gitattributes",
+        "repository": true,
+        "destination":  ".gitattributes",
+        "sha256":  "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  ".gitignore",
+        "repository": true,
+        "destination":  ".gitignore",
+        "sha256":  "6d044be442c2e568bb18a8dc61aa4153ad08d13d8c5393faa61daf6ffed6880b"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "AGENTS.md",
+        "repository": true,
+        "destination":  "docs/logx.md",
+        "sha256":  "3f770ef7de37f6fc3f19b2bc89ca6d398491bac5f8452837f7d0607f614eb94e"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "LICENSE",
+        "repository": true,
+        "destination":  "LICENSE",
+        "sha256":  "3442055851c360836b0dc3f499a187762391b9476ac06188b0a03a5b17bb3f2f"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "README.md",
+        "destination":  "README.md",
+        "sha256":  "7c29cfd841833e1404ad7717beaf0f0c4c3677c3991c80f17d3d31eae420242f"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "bench_test.go",
+        "destination":  "bench_test.go",
+        "sha256":  "ced4239d61bc8fa08e05aa69365ee4175fbfc215c65f412c2de2f27a00a6bd68"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "config.go",
+        "destination":  "config.go",
+        "sha256":  "4c0ba49b12455040e21c1c960ddbf0c7346b72e25d1bd249ba9e76b6baca603a"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "config_test.go",
+        "destination":  "config_test.go",
+        "sha256":  "ef3a97fb9c75a8e648027ada05654a193ae89a9098a8c6d4cb92951e55583e45"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "context.go",
+        "destination":  "context.go",
+        "sha256":  "32ff2e67d8ebaacc4f3348ef97519e07f8e8fb5f7f0a757a5a3ca69eace8305d"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "context_test.go",
+        "destination":  "context_test.go",
+        "sha256":  "06baeac0bccccfccc6aff11365a68c39dcb53af7e69faf99665b3747663976da"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "decorator.go",
+        "destination":  "decorator.go",
+        "sha256":  "1a93376d28b2b9a4d316ccfc43e822f7230b76570d97592b4211fd9ddd5a286a"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "doc.go",
+        "destination":  "doc.go",
+        "sha256":  "08f179df52443a9fe4f4e82630f055a9b040f45dfe9bcb84d8288d13b6938463"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "example_test.go",
+        "destination":  "example_test.go",
+        "sha256":  "8acff26422ece13d94ee33da3cd206bd7c14ad0601d98abe0f6d5443a3c472ed"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "go.mod",
+        "destination":  "go.mod",
+        "sha256":  "34f465a07f9cd5fa145a0076351280230a26ce285ec27ff4f03aa3710ff9b508"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "handler.go",
+        "destination":  "handler.go",
+        "sha256":  "429d46c8ed88c0cd93eb3a727c241aa83d71088827f9784263b9f7e58bb59b5e"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "httpx/bench_test.go",
+        "destination":  "httpx/bench_test.go",
+        "sha256":  "b2009b5489427815488991123933d81f53092cb6bab13c49f45b078738f79b5e"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "httpx/client.go",
+        "destination":  "httpx/client.go",
+        "sha256":  "decb16f9ff03badeb521d163cd73d28795f5033fb2d34261c2dc4f6c06ad8f4e"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "httpx/client_test.go",
+        "destination":  "httpx/client_test.go",
+        "sha256":  "11b4a764249b92a9fd179bd046b5192a82d164792a505dfb7b9b1798c4c89894"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "httpx/doc.go",
+        "destination":  "httpx/doc.go",
+        "sha256":  "2a0d56c6d88395f8936d5b538ab53ddf69cef4efc2bb819bc3c96c6a45e5cbd8"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "httpx/example_test.go",
+        "destination":  "httpx/example_test.go",
+        "sha256":  "0dab4b3727dc0647d74f59df88f5da02fc3b2fc18f6e8d6f9a35c918bae61036"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "httpx/logging.go",
+        "destination":  "httpx/logging.go",
+        "sha256":  "d2fa777b387d83c55fc46351f9c281b83cc401b7894d0c9e8733d6793f6c1f76"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "httpx/logging_test.go",
+        "destination":  "httpx/logging_test.go",
+        "sha256":  "4a0b1463eb1ecf0a4196f18e551c0e051d26bfd382f893fa55769c6427d5603a"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "httpx/middleware.go",
+        "destination":  "httpx/middleware.go",
+        "sha256":  "c0ce6f9ddae4da0e37890592b6fe2464d813ff22c98fd91171f364fc9e8410a4"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "httpx/middleware_test.go",
+        "destination":  "httpx/middleware_test.go",
+        "sha256":  "dc7eb8aaf167e9dbf114c1c228a6b5d7c87203393f017971e7c11ffef3786d0a"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "httpx/transport.go",
+        "destination":  "httpx/transport.go",
+        "sha256":  "ad6985f07449d8c4c6892923b9b697157b12702ff19a06060e2768b0365bc499"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "httpx/transport_test.go",
+        "destination":  "httpx/transport_test.go",
+        "sha256":  "e38b77e354388d942ea6ffd53cc1e40f0c4b37f797cbe6baa2d9e20ec8ca1a79"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "id.go",
+        "destination":  "id.go",
+        "sha256":  "9a9432397d0cab2b64f9161a710aa97e259672b0e64c1df28d67ae3c96247e0d"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "id_test.go",
+        "destination":  "id_test.go",
+        "sha256":  "90bb9e6c0bc94e45940072b54e9e6abdd6f94d78064a21ea859455a178d9c486"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "logx.go",
+        "destination":  "logx.go",
+        "sha256":  "e7547fa4e627c0b65aabba2a69f8610c9f766a9c9a7492f46cef6f094db9795a"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "logx_test.go",
+        "destination":  "logx_test.go",
+        "sha256":  "af42a0395dfb3870f45f38cb6c9f3cb282f81ae58dd62dfbae8a080740508f92"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "redaction.go",
+        "destination":  "redaction.go",
+        "sha256":  "366477c7e452959274dbe5aa7626e4db97b10e55518cacbc34cdd4ff8b4d1802"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "redaction_test.go",
+        "destination":  "redaction_test.go",
+        "sha256":  "307ac824540d2ceaa66501f6784a1433b1fd6d14b613514cd92a9eef449c144f"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "rotator.go",
+        "destination":  "rotator.go",
+        "sha256":  "63f66269da41e6874ba50143534117132c07f11ad30fff3b55929203baa16ead"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "rotator_test.go",
+        "destination":  "rotator_test.go",
+        "sha256":  "21e688f92b160f642cd4edaf2c30e9cec1c5eb18097aba2aaf014833ad4313f0"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "stack.go",
+        "destination":  "stack.go",
+        "sha256":  "9dce6e2a9837dddb76dc596cf5a26bcb0f6183a207c9310fe3d1e2af6eeb5cb7"
+    },
+    {
+        "module":  "logx",
+        "source":  "go-log",
+        "commit":  "4f9e7ac2b214ee6507aa595e3ead48ecbed9e43a",
+        "file":  "stack_test.go",
+        "destination":  "stack_test.go",
+        "sha256":  "788504ecee583e7a8bec1edfa8f90596b455c7ec1f950c69bb399c39765faa33"
+    },
+    {
+        "module":  "envx",
+        "source":  "go-env",
+        "commit":  "db14048faf621df4755801dd416fc0e9fe1cdfd3",
+        "file":  ".agents/skills/go-env/SKILL.md",
+        "repository": true,
+        "destination":  ".agents/skills/envx/SKILL.md",
+        "sha256":  "bc17edf9ec16c071cc7526bf629ab726363a361e6427317a5e90a2da4dca9446"
+    },
+    {
+        "module":  "envx",
+        "source":  "go-env",
+        "commit":  "db14048faf621df4755801dd416fc0e9fe1cdfd3",
+        "file":  ".editorconfig",
+        "repository": true,
+        "destination":  ".editorconfig",
+        "sha256":  "39605141ce4c66fc07285846e5cd64c2a5d2cc23320a0f57ff07aaca845d641c"
+    },
+    {
+        "module":  "envx",
+        "source":  "go-env",
+        "commit":  "db14048faf621df4755801dd416fc0e9fe1cdfd3",
+        "file":  ".gitattributes",
+        "repository": true,
+        "destination":  ".gitattributes",
+        "sha256":  "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+    },
+    {
+        "module":  "envx",
+        "source":  "go-env",
+        "commit":  "db14048faf621df4755801dd416fc0e9fe1cdfd3",
+        "file":  ".gitignore",
+        "repository": true,
+        "destination":  ".gitignore",
+        "sha256":  "6d044be442c2e568bb18a8dc61aa4153ad08d13d8c5393faa61daf6ffed6880b"
+    },
+    {
+        "module":  "envx",
+        "source":  "go-env",
+        "commit":  "db14048faf621df4755801dd416fc0e9fe1cdfd3",
+        "file":  "AGENTS.md",
+        "repository": true,
+        "destination":  "docs/envx.md",
+        "sha256":  "672f01b70f285675d1f66ae4d7b1d2fa11e69a3f786d6e8871140b1be1505ad1"
+    },
+    {
+        "module":  "envx",
+        "source":  "go-env",
+        "commit":  "db14048faf621df4755801dd416fc0e9fe1cdfd3",
+        "file":  "LICENSE",
+        "repository": true,
+        "destination":  "LICENSE",
+        "sha256":  "3442055851c360836b0dc3f499a187762391b9476ac06188b0a03a5b17bb3f2f"
+    },
+    {
+        "module":  "envx",
+        "source":  "go-env",
+        "commit":  "db14048faf621df4755801dd416fc0e9fe1cdfd3",
+        "file":  "README.md",
+        "destination":  "README.md",
+        "sha256":  "fb4d8bb42f040399a1aff9d32ef9688e8b81238d5d3a060fe6bee1253dedea47"
+    },
+    {
+        "module":  "envx",
+        "source":  "go-env",
+        "commit":  "db14048faf621df4755801dd416fc0e9fe1cdfd3",
+        "file":  "dotenv.go",
+        "destination":  "dotenv.go",
+        "sha256":  "c8b5e8ef63a5c5264beb705d7e4e3001ac09f6f106761136ffd82ea4b64b63b1"
+    },
+    {
+        "module":  "envx",
+        "source":  "go-env",
+        "commit":  "db14048faf621df4755801dd416fc0e9fe1cdfd3",
+        "file":  "dotenv_fixtures_test.go",
+        "destination":  "dotenv_fixtures_test.go",
+        "sha256":  "191f180df2924c08f3bf6c98512ad5efc2e638bcdf97f8b95b0984b48a99ae5d"
+    },
+    {
+        "module":  "envx",
+        "source":  "go-env",
+        "commit":  "db14048faf621df4755801dd416fc0e9fe1cdfd3",
+        "file":  "dotenv_test.go",
+        "destination":  "dotenv_test.go",
+        "sha256":  "50c80fbda549a6f061e960c1b691e7036935c66dcde6dcd870803df9243b4dcd"
+    },
+    {
+        "module":  "envx",
+        "source":  "go-env",
+        "commit":  "db14048faf621df4755801dd416fc0e9fe1cdfd3",
+        "file":  "go.mod",
+        "destination":  "go.mod",
+        "sha256":  "63938c8e40a16a133c171137784b229f5a4963caf769dd53eb6410de48865ae3"
+    },
+    {
+        "module":  "envx",
+        "source":  "go-env",
+        "commit":  "db14048faf621df4755801dd416fc0e9fe1cdfd3",
+        "file":  "goenv.go",
+        "destination":  "goenv.go",
+        "sha256":  "0045f5699fbfa08b1c8952c0a5ec307b3086b41040ad6e9d694d5c668388571a"
+    },
+    {
+        "module":  "envx",
+        "source":  "go-env",
+        "commit":  "db14048faf621df4755801dd416fc0e9fe1cdfd3",
+        "file":  "goenv_test.go",
+        "destination":  "goenv_test.go",
+        "sha256":  "9228a478518349795e3f290a0c8b0f4b6c62295c0fc5d43dc9f3f6a0ce7ccf0d"
+    },
+    {
+        "module":  "confx",
+        "source":  "go-conf",
+        "commit":  "53ec6143150c7e1075cb7f2d4c38f662a4922f15",
+        "file":  ".editorconfig",
+        "repository": true,
+        "destination":  ".editorconfig",
+        "sha256":  "39605141ce4c66fc07285846e5cd64c2a5d2cc23320a0f57ff07aaca845d641c"
+    },
+    {
+        "module":  "confx",
+        "source":  "go-conf",
+        "commit":  "53ec6143150c7e1075cb7f2d4c38f662a4922f15",
+        "file":  ".gitattributes",
+        "repository": true,
+        "destination":  ".gitattributes",
+        "sha256":  "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+    },
+    {
+        "module":  "confx",
+        "source":  "go-conf",
+        "commit":  "53ec6143150c7e1075cb7f2d4c38f662a4922f15",
+        "file":  ".gitignore",
+        "repository": true,
+        "destination":  ".gitignore",
+        "sha256":  "6d044be442c2e568bb18a8dc61aa4153ad08d13d8c5393faa61daf6ffed6880b"
+    },
+    {
+        "module":  "confx",
+        "source":  "go-conf",
+        "commit":  "53ec6143150c7e1075cb7f2d4c38f662a4922f15",
+        "file":  "LICENSE",
+        "repository": true,
+        "destination":  "LICENSE",
+        "sha256":  "3442055851c360836b0dc3f499a187762391b9476ac06188b0a03a5b17bb3f2f"
+    },
+    {
+        "module":  "confx",
+        "source":  "go-conf",
+        "commit":  "53ec6143150c7e1075cb7f2d4c38f662a4922f15",
+        "file":  "Makefile",
+        "destination":  "Makefile",
+        "sha256":  "d566224f11e5bfee1f5aa681d7d5fb141aa391e6313c0bfdcccefc07d19a39fa"
+    },
+    {
+        "module":  "confx",
+        "source":  "go-conf",
+        "commit":  "53ec6143150c7e1075cb7f2d4c38f662a4922f15",
+        "file":  "README.md",
+        "destination":  "README.md",
+        "sha256":  "9e7dc8769b370880a878c13a11509ffab25340e6a929495c7433bb53835c1677"
+    },
+    {
+        "module":  "confx",
+        "source":  "go-conf",
+        "commit":  "53ec6143150c7e1075cb7f2d4c38f662a4922f15",
+        "file":  "config.go",
+        "destination":  "config.go",
+        "sha256":  "b3a99548a8b1c5aa03f6e0e5cb48ee1d9512ddb72a3f2d134a69268f5ddb19dc"
+    },
+    {
+        "module":  "confx",
+        "source":  "go-conf",
+        "commit":  "53ec6143150c7e1075cb7f2d4c38f662a4922f15",
+        "file":  "config_test.go",
+        "destination":  "config_test.go",
+        "sha256":  "0cf952e2e00b69a945db6c4744112a3963aac33f979ce246084754a82c70a05c"
+    },
+    {
+        "module":  "confx",
+        "source":  "go-conf",
+        "commit":  "53ec6143150c7e1075cb7f2d4c38f662a4922f15",
+        "file":  "go.mod",
+        "destination":  "go.mod",
+        "sha256":  "b1deb424751e30ddd79280aa67a848f753d932935cec5537ed6d0a9eafa39123"
+    },
+    {
+        "module":  "confx",
+        "source":  "go-conf",
+        "commit":  "53ec6143150c7e1075cb7f2d4c38f662a4922f15",
+        "file":  "go.sum",
+        "destination":  "go.sum",
+        "sha256":  "de4d75cfb4cf59e13ea70404a3d53d250c0d2f40f6ef3b50256ebc1f618eb6a3"
+    },
+    {
+        "module":  "confx",
+        "source":  "go-conf",
+        "commit":  "53ec6143150c7e1075cb7f2d4c38f662a4922f15",
+        "file":  "testdata/app.ini",
+        "destination":  "testdata/app.ini",
+        "sha256":  "d693a4dabbb577ee59ee5f9b02f39c35159a85c053f040b7faaf420e8ce212eb"
+    },
+    {
+        "module":  "confx",
+        "source":  "go-conf",
+        "commit":  "53ec6143150c7e1075cb7f2d4c38f662a4922f15",
+        "file":  "testdata/app.json",
+        "destination":  "testdata/app.json",
+        "sha256":  "c71629fed2339d7baf1879c4445c30285b1fc162481a7275661628b1f7c843b7"
+    },
+    {
+        "module":  "confx",
+        "source":  "go-conf",
+        "commit":  "53ec6143150c7e1075cb7f2d4c38f662a4922f15",
+        "file":  "testdata/app.jsonc",
+        "destination":  "testdata/app.jsonc",
+        "sha256":  "ebdc19a0e3a92bc449f9521bd740cec5a65585c24e53b1ad297e65ad15bdf834"
+    },
+    {
+        "module":  "confx",
+        "source":  "go-conf",
+        "commit":  "53ec6143150c7e1075cb7f2d4c38f662a4922f15",
+        "file":  "testdata/app.toml",
+        "destination":  "testdata/app.toml",
+        "sha256":  "9032a7b1688e0a034f0200fe6c8714f7d4962d7a38030215f281a1cbee6fa6c5"
+    },
+    {
+        "module":  "confx",
+        "source":  "go-conf",
+        "commit":  "53ec6143150c7e1075cb7f2d4c38f662a4922f15",
+        "file":  "testdata/app.yaml",
+        "destination":  "testdata/app.yaml",
+        "sha256":  "c7b8fb576e0fa6466932d490c4adfeac29705741c9b4277761818995ffd67ebf"
+    },
+    {
+        "module":  "confx",
+        "source":  "go-conf",
+        "commit":  "53ec6143150c7e1075cb7f2d4c38f662a4922f15",
+        "file":  "testdata/sections.ini",
+        "destination":  "testdata/sections.ini",
+        "sha256":  "487c5bf137ff59566bb0047e5bd40f2e1cb475060c7eab29f398d8d83cb2463b"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  ".agents/skills/go-build-bin/SKILL.md",
+        "repository": true,
+        "destination":  ".agents/skills/buildx/SKILL.md",
+        "sha256":  "e18eb0b759231bbb83ba5cb9f3a8b31dc5ca1b81d8cd9bfb60d04108d3bc9f7d"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  ".editorconfig",
+        "repository": true,
+        "destination":  ".editorconfig",
+        "sha256":  "39605141ce4c66fc07285846e5cd64c2a5d2cc23320a0f57ff07aaca845d641c"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  ".gitattributes",
+        "repository": true,
+        "destination":  ".gitattributes",
+        "sha256":  "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  ".gitignore",
+        "repository": true,
+        "destination":  ".gitignore",
+        "sha256":  "6d044be442c2e568bb18a8dc61aa4153ad08d13d8c5393faa61daf6ffed6880b"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "AGENTS.md",
+        "repository": true,
+        "destination":  "docs/buildx.md",
+        "sha256":  "479c22c57a86059b94a7e52221d17b8a226c16cacbe1916ea2f4b5091f0d3589"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "LICENSE",
+        "repository": true,
+        "destination":  "LICENSE",
+        "sha256":  "3442055851c360836b0dc3f499a187762391b9476ac06188b0a03a5b17bb3f2f"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "README.md",
+        "destination":  "README.md",
+        "sha256":  "a1acee353242f6b8f277006a1eb17efa15f7c9eef8aeee3bb6c10cb358a3f6eb"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "archive/archive.go",
+        "destination":  "archive/archive.go",
+        "sha256":  "3ccec0bda35840b2483e6da537ee3998db12ce20e5a40d4d9139ee31a8072e0a"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "archive/archive_test.go",
+        "destination":  "archive/archive_test.go",
+        "sha256":  "d1dea5a9e26e84ab101de0875cb4c48a5902db15ea27443f9111846e9f27ef2e"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "atomicfile/atomicfile.go",
+        "destination":  "atomicfile/atomicfile.go",
+        "sha256":  "cd3c629964bea75b0ae629548d786fc8eb5de57a43c9fd00c635ab2a2ef5c488"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "atomicfile/atomicfile_test.go",
+        "destination":  "atomicfile/atomicfile_test.go",
+        "sha256":  "906dca3d4e5693958455f0c0aeaabb340d40d81f5bedb88f08c11d40deb8821b"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/args.go",
+        "destination":  "build/args.go",
+        "sha256":  "1003ec90b7f8d67ad5e232dbd9e1dd8a174c8f72e8f8e886afdffede9a3ee060"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/args_test.go",
+        "destination":  "build/args_test.go",
+        "sha256":  "38f152d9c03a2b4ca1a5f3512fd0e05e1a7e87ef0267b367edd9f38456aa4da3"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/constants.go",
+        "destination":  "build/constants.go",
+        "sha256":  "fa0f79554811a63a79b31fabbf9b069b5347070554b3f4e34a41488082ba2c32"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/distlist.go",
+        "destination":  "build/distlist.go",
+        "sha256":  "c57ffeb86e068412b6e4aa71bc1ffae4c37a58489f61a8a429593b3b2cb8760f"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/errors.go",
+        "destination":  "build/errors.go",
+        "sha256":  "7b6996e20ddbe4ad9296de818c2b6e47d2cb514e8ce0a3a1014c785bfa02b662"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/errors_test.go",
+        "destination":  "build/errors_test.go",
+        "sha256":  "0e74e554873b0afaf3d91db8514fd17376f6b93951c3be90f27d352fa7958200"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/help.go",
+        "destination":  "build/help.go",
+        "sha256":  "74679714428688ef8ee0c4206d30390e9e6943b97937b77ecb39142e86a574d6"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/help_test.go",
+        "destination":  "build/help_test.go",
+        "sha256":  "bb98150b23e7ebf3040c76647b60e5a93dc9fc255ee797cba31e2a185f1b1d3f"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/ldflags.go",
+        "destination":  "build/ldflags.go",
+        "sha256":  "bd3df9960684b1933c7a8928723106f00a9e35f19582a50d1855cb4036d1bb65"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/ldflags_test.go",
+        "destination":  "build/ldflags_test.go",
+        "sha256":  "a70f708ff105f0a59bb2ca51bdf046c55b651a3576f6739c45fe484bd9aba4f6"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/output.go",
+        "destination":  "build/output.go",
+        "sha256":  "d96e295942cb5df82cd13fa794a7c9eec441aecd192202f2d41fcf38c15f5f90"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/output_test.go",
+        "destination":  "build/output_test.go",
+        "sha256":  "f1291d9297a661b935b454d8be0d9c9eef11e866b5c6176fc6c14363d14e714f"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/paths.go",
+        "destination":  "build/paths.go",
+        "sha256":  "dd62284b9e0e4c375c213f80ad5cfbeab07883c51abd6ad8ad96288faca80187"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/paths_test.go",
+        "destination":  "build/paths_test.go",
+        "sha256":  "14d50bc7e3ff4dc81a22365657547c9f6a5303d24e6996d713d4efcbdde25ca2"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/platform.go",
+        "destination":  "build/platform.go",
+        "sha256":  "072560fa7d209411c21cdd6a8d533ac8d8b74c303ed8dfcae8669de97135b6e7"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/run.go",
+        "destination":  "build/run.go",
+        "sha256":  "2d61b9db9c8216b0900f4271d8cd53194d6b75e4fd5fdaedce0e5bf385f2aa96"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/run_test.go",
+        "destination":  "build/run_test.go",
+        "sha256":  "73b329274d9ac4a5705419d60652bf2e35eab4b007cc584674244fcb38c2f5ad"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/targets.go",
+        "destination":  "build/targets.go",
+        "sha256":  "61579b5160810427d26cc820702159df2fa0d6e13ba1c8a6dc58911da1a2f02f"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "build/targets_test.go",
+        "destination":  "build/targets_test.go",
+        "sha256":  "6beb292695a01a10109165ff82c01f54c41ce8e414e67ff4d7bf888d0947788c"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "checksum/checksum.go",
+        "destination":  "checksum/checksum.go",
+        "sha256":  "dce8fef728c50a339ad51bde0aac0fc4b88301f29c5cc618ded1ac3c0719fd4e"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "checksum/checksum_test.go",
+        "destination":  "checksum/checksum_test.go",
+        "sha256":  "711b16331c5cfa865c050821836ca2cdf9b318c8b1a3c1a73b3408fec7c06553"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "go.mod",
+        "destination":  "go.mod",
+        "sha256":  "ce9aa5cdfe6eb5b1c0794389a4bcc2f5f65c11b08989f0a2d53c9d491f37a2e5"
+    },
+    {
+        "module":  "buildx",
+        "source":  "go-build-bin",
+        "commit":  "62abecb969f90343a62bff74d13523fb6207d55f",
+        "file":  "main.go",
+        "destination":  "main.go",
+        "sha256":  "fc965383ba9d53bc401316a5b2808a1f0db93779da6209b58068e054bf7e1ed1"
+    }
+]
